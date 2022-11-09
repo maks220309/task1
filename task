@@ -1,0 +1,11 @@
+let arm = (num) => {
+    let result = 0;
+    let arr = num.toString().split('');
+    let sum = arr.reduce((acc,el) => {return(acc = acc + Math.pow(Number(el),arr.length))},0);
+    if (sum == num){result = true}
+    else if (sum != num){result = false}
+    return result
+}
+console.log(arm(7)) ‐> true
+console.log(arm(371)) ‐> true
+console.log(arm(1652)) ‐> false
